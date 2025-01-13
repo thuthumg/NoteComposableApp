@@ -7,7 +7,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.notecomposableapp.ui.composables.NoteItemView
 
 @Composable
-fun BookMarksNoteItemListView(modifier: Modifier = Modifier) {
+fun LinearNoteListView(modifier: Modifier = Modifier) {
     LazyColumn(modifier = modifier) {
         items(30, key = {it}){
             NoteItemView()
@@ -19,6 +19,6 @@ fun BookMarksNoteItemListView(modifier: Modifier = Modifier) {
 // Preview function
 @Preview(showBackground = true)
 @Composable
-fun BookMarksNoteItemListViewPreview() {
-    BookMarksNoteItemListView()
+fun LinearNoteListViewPreview() {
+    LinearNoteListView()
 }

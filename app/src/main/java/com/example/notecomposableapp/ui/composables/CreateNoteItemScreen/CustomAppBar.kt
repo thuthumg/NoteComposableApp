@@ -1,10 +1,8 @@
-package com.example.notecomposableapp.ui.composables.CreateNoteItemScreen
+package com.example.notecomposableapp.ui.composables.createNoteItemScreen
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Save
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -22,7 +20,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-//import com.example.notecomposableapp.ui.theme.NoteTextColor
+import com.example.notecomposableapp.ui.theme.ColorPrimary
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -60,7 +58,7 @@ fun CustomAppBar(
                     Icon(
                         Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = null,
-                        tint = MaterialTheme.colorScheme.primary
+                        tint = Color.White
                     )
 
                 }
@@ -74,7 +72,7 @@ fun CustomAppBar(
                     Icon(
                         Icons.Default.Save,
                         contentDescription = "Save",
-                        tint = MaterialTheme.colorScheme.primary
+                        tint = MaterialTheme.colorScheme.onSurface
                     )
 
                 }
@@ -82,8 +80,8 @@ fun CustomAppBar(
 
         },
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = MaterialTheme.colorScheme.onPrimary
+            containerColor = ColorPrimary
         ),
-        modifier = modifier,
+        modifier = modifier
     )
 }

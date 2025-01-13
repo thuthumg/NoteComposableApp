@@ -12,7 +12,7 @@ import com.example.notecomposableapp.ui.composables.NoteItemView
 import kotlin.math.ceil
 
 @Composable
-fun NoteItemListView(modifier: Modifier = Modifier) {
+fun GridNoteListView(modifier: Modifier = Modifier) {
 
     val gridHeight = (ceil(30.toDouble() / 2).toInt() * 56).dp
 
@@ -20,7 +20,9 @@ fun NoteItemListView(modifier: Modifier = Modifier) {
     columns = GridCells.Fixed(2),
     modifier = modifier.height(gridHeight),
     horizontalArrangement = Arrangement.spacedBy(2.dp),
-    verticalArrangement = Arrangement.spacedBy(2.dp)) {
+    //verticalArrangement = Arrangement.spacedBy(2.dp)
+    )
+     {
         items(30){
             NoteItemView()
         }
@@ -30,6 +32,6 @@ fun NoteItemListView(modifier: Modifier = Modifier) {
 // Preview function
 @Preview(showBackground = true)
 @Composable
-fun NoteItemListViewPreview() {
-    NoteItemListView()
+fun GridNoteListViewPreview() {
+    GridNoteListView()
 }

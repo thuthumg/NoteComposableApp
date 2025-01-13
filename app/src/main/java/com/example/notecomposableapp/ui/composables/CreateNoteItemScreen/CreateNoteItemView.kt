@@ -1,7 +1,6 @@
-package com.example.notecomposableapp.ui.composables.CreateNoteItemScreen
+package com.example.notecomposableapp.ui.composables.createNoteItemScreen
 
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -22,7 +21,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 
-@OptIn(ExperimentalMaterial3Api::class)
+//@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CreateNoteItemView(
     onTapBack: () -> Unit,
@@ -43,28 +42,31 @@ fun CreateNoteItemView(
     ) { paddingValues ->
 
         Column(modifier = Modifier.padding(paddingValues)) {
-
-            val textFieldFocusRequester = remember { FocusRequester() }
-
-            // Automatically request focus when the screen opens
-            LaunchedEffect(Unit) {
-                textFieldFocusRequester.requestFocus()
-            }
-            TextField(
-                value = descText,
-                onValueChange = { newText ->
-                    descText = newText
-                },
-                textStyle = TextStyle(
-                fontSize = 16.sp),
-               colors =  TextFieldDefaults.textFieldColors(
-                    containerColor = Color.Transparent, // Set your desired background color
-                    focusedIndicatorColor = Color.Transparent, // Remove underline when focused
-                    unfocusedIndicatorColor = Color.Transparent // Remove underline when unfocused
-                ),
-                modifier = Modifier
-                    .focusRequester(textFieldFocusRequester)
-            )
+//
+//            val textFieldFocusRequester = remember { FocusRequester() }
+//
+//            // Automatically request focus when the screen opens
+//            LaunchedEffect(Unit) {
+//                textFieldFocusRequester.requestFocus()
+//            }
+//            TextField(
+//                value = descText,
+//                onValueChange = { newText ->
+//                    descText = newText
+//                },
+//                textStyle = TextStyle(
+//                fontSize = 16.sp),
+////                colors = TextFieldDefaults.textFieldColors(
+////                    containerColor = Color.Transparent, // Set your desired background color
+////                    focusedIndicatorColor = Color.Transparent, // Remove underline when focused
+////                    unfocusedIndicatorColor = Color.Transparent, // Remove underline when unfocused
+////                    // focusedPlaceholderColor = NoteTextColor,
+////                    // unfocusedPlaceholderColor = NoteTextColor,
+////                    focusedTextColor = Color.White
+////                ),
+//                modifier = Modifier
+//                    .focusRequester(textFieldFocusRequester)
+//            )
         }
     }
 }

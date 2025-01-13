@@ -1,6 +1,5 @@
 package com.example.notecomposableapp.ui.theme
 
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 val Purple80 = Color(0xFFD0BCFF)
@@ -11,22 +10,16 @@ val Purple40 = Color(0xFF6650a4)
 val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
 
-//val CardBackgroundColor = Color(0xFF1E1E1E)
-
-
 val TitleTextColor = Color(0xFFF9B53A)
 val NoteDescTextColor = Color(0xFF5D4F43)
 
-val LightSearchBoxBGColor = Color(0xFF000000)
-val DarkSearchBoxBGColor = Color(0xFF1E1E1E)
+val SearchBoxBGColor = Color(0xFFF161c24)
+val CardBGColor = Color(0xFFF161c24)
 
-val LightCardBGColor = Color(0xFF000000)
-val DarkCardBGColor = Color(0xFF1E1E1E)
-
-val BottomBarBGColor = Color(0xFF1E1E1E)
+val BottomBarBGColor = Color(0xFFF1f2a33)
 
 val BottomBarSelectedIconColor = Color(0xFFF9B53A)
-val BottomBarUnSelectedIconColor = Color(0xFF5D4F43)//0x8DF9B53A
+val BottomBarUnSelectedIconColor =  Color(0xFFF1A000000)
 
 // Light theme colors
 val LightPrimary = Color(0xFFF9B53A)
@@ -47,3 +40,9 @@ val DarkOnPrimary = Color(0xFF000000)
 val DarkOnSecondary = Color(0xFF000000)
 val DarkOnBackground = Color(0xFFFFFFFF)
 val DarkOnSurface = Color(0xFFFFFFFF)
+
+val ColorPrimary = Color(0xFFF1f2532)
+val ColorPrimaryDark = Color(0xFFF161c24)
+val ColorPrimaryLight = Color(0xFFF1f2a33)
+val ColorAccent = Color(0xFFFe7b943)
+val ColorSecondaryText = Color(0xFFF535968)

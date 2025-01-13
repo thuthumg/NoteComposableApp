@@ -23,9 +23,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.notecomposableapp.ui.theme.CardBGColor
 import com.example.notecomposableapp.ui.theme.NoteDescTextColor
 import com.example.notecomposableapp.ui.theme.TitleTextColor
-import com.example.notecomposableapp.ui.theme.cardBGColor
 
 @Composable
 fun NoteItemView(modifier: Modifier = Modifier) {
@@ -35,7 +35,7 @@ fun NoteItemView(modifier: Modifier = Modifier) {
             .fillMaxWidth(),
         shape = RoundedCornerShape(20.dp),
         colors = CardDefaults.cardColors(
-            containerColor = cardBGColor() // Set the background color
+            containerColor = CardBGColor // Set the background color
         ),
         elevation = CardDefaults.cardElevation()
     ) {
@@ -59,12 +59,12 @@ fun NoteItemView(modifier: Modifier = Modifier) {
                 Icon(
                     imageVector = Icons.Filled.Delete,
                     contentDescription = "Delete Icon",
-                    tint = Color.White
+                    tint =  Color(0xFFFFFF8E1)
                 )
                 Icon(
                     imageVector = Icons.Filled.BookmarkAdd,
                     contentDescription = "Bookmark Icon",
-                    tint = Color.White
+                    tint =  Color(0xFFFFFF8E1)
                 )
             }
         }

@@ -13,7 +13,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -31,14 +30,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.notecomposableapp.ui.theme.SearchBoxBGColor
 import com.example.notecomposableapp.ui.theme.TitleTextColor
-import com.example.notecomposableapp.ui.theme.searchBoxBGColor
 
 @Composable
 fun HomeScreenView(modifier: Modifier = Modifier) {
     var searchQuery by remember { mutableStateOf("") }
    Column(modifier
-       .padding(16.dp)
+       .padding(top = 16.dp, start = 16.dp, end = 16.dp, bottom = 8.dp)
         .fillMaxSize()) {
 
         Spacer(modifier = Modifier.height(8.dp))
@@ -59,7 +58,7 @@ fun HomeScreenView(modifier: Modifier = Modifier) {
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        NoteItemListView()
+        GridNoteListView()
     }
 
 }
@@ -82,7 +81,7 @@ fun SearchBox(
             .fillMaxWidth(0.9f)
             .height(50.dp)
             .background(
-                color = searchBoxBGColor(),
+                color = SearchBoxBGColor,
                 shape = RoundedCornerShape(30.dp)
             )
             .padding(horizontal = 16.dp, vertical = 12.dp),

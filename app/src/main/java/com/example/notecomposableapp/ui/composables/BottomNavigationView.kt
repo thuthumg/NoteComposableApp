@@ -1,33 +1,26 @@
 package com.example.notecomposableapp.ui.composables
 
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.FabPosition
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.example.notecomposableapp.ui.composables.CreateNoteItemScreen.CreateNoteItemView
-import com.example.notecomposableapp.ui.composables.bookMarksScreen.BookMarksNoteItemListView
+import com.example.notecomposableapp.ui.composables.bookMarksScreen.BookMarksScreen
+import com.example.notecomposableapp.ui.composables.createNoteItemScreen.CreateNoteItemView
 import com.example.notecomposableapp.ui.composables.homeScreen.HomeScreenView
+import com.example.notecomposableapp.ui.theme.ColorPrimary
 
 @Composable
 fun BottomNavigationView() {
@@ -66,7 +59,7 @@ fun BottomNavigationView() {
                 )
             }
         },
-        //   floatingActionButtonPosition = FabPosition.Center // Center the FAB horizontally
+        containerColor = ColorPrimary
     ) { paddingValues ->
         NavHost(
             navController = navController,
@@ -91,7 +84,7 @@ fun BottomNavigationView() {
 
 @Composable
 fun BookmarksScreen(paddingValues: PaddingValues) {
-    BookMarksNoteItemListView(
+    BookMarksScreen(
         modifier = Modifier
             .padding(paddingValues) // Use padding from Scaffold
             .fillMaxSize()
