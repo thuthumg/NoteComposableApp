@@ -13,12 +13,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-//import com.example.notecomposableapp.ui.composables.createNoteItemScreen.CreateNoteItemView
 import com.example.notecomposableapp.ui.custom.CustomBottomNavigation
 import com.example.notecomposableapp.ui.custom.Navigation
 import com.example.notecomposableapp.ui.custom.Screen
