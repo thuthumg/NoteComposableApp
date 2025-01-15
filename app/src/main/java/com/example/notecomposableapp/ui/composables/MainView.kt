@@ -13,6 +13,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -60,7 +61,7 @@ fun MainView() {
     Scaffold(
         bottomBar = {
 
-            if (currentRoute != "addNote") {
+            if (currentRoute != "AddNote") {
                 CustomBottomNavigation(
                     currentScreenId = currentScreen.value.id,
                     onItemSelected = { selectedScreen ->
@@ -71,7 +72,9 @@ fun MainView() {
                             launchSingleTop = true
                             restoreState = true
                         }},
-                    onFloatingAction = {})
+                    onFloatingAction = {
+                        navController.navigate("AddNote")
+                       })
 
             }
         },

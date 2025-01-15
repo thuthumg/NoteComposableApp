@@ -9,6 +9,7 @@ import androidx.navigation.compose.NavHost
 
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
+import com.example.notecomposableapp.ui.composables.CreateNoteItemView
 import com.example.notecomposableapp.ui.screen.BookMarksScreen
 import com.example.notecomposableapp.ui.screen.HomeScreen
 
@@ -31,6 +32,12 @@ fun Navigation(navController: NavHostController, paddingValues: PaddingValues) {
                     .padding(paddingValues)
                     .fillMaxSize()
             )
+        }
+
+        composable("AddNote"){
+            CreateNoteItemView(onTapBack = {
+                navController.navigateUp()
+            }, onSaveClicked = {}, modifier = Modifier)
         }
 
     }
