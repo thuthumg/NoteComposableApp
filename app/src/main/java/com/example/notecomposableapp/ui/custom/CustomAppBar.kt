@@ -1,4 +1,4 @@
-package com.example.notecomposableapp.ui.composables.createNoteItemScreen
+package com.example.notecomposableapp.ui.custom
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.icons.Icons

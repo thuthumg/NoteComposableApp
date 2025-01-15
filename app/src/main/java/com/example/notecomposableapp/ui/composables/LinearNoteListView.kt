@@ -1,10 +1,9 @@
-package com.example.notecomposableapp.ui.composables.bookMarksScreen
+package com.example.notecomposableapp.ui.composables
 
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.notecomposableapp.ui.composables.NoteItemView
 
 @Composable
 fun LinearNoteListView(modifier: Modifier = Modifier) {

@@ -1,4 +1,4 @@
-package com.example.notecomposableapp.ui.composables.homeScreen
+package com.example.notecomposableapp.ui.composables
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.height
@@ -8,7 +8,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.notecomposableapp.ui.composables.NoteItemView
 import kotlin.math.ceil
 
 @Composable
